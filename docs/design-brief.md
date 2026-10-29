@@ -110,7 +110,7 @@
 - 説明: 観測者の目の高さ、PLATEAU の 3D 都市モデル、天体の位置計算を組み合わせ、「この場所・この時刻に、その天体が建物に隠れず見えるか」を計算して、東京23区の観測地点を推薦する iPhone アプリ。地上では月がビルに隠れ、展望台では見える、を 3D で示す。
 - 数字: 43 地点（観測地点）／ 58 天体（月・惑星5・明るい恒星52）／ 180 件（計算ロジックのテスト）
 - 技術: Swift / SwiftUI / RealityKit / MapKit / PLATEAU / Open-Meteo / VIIRS
-- リンク: GitHub https://github.com/jphacks/tkb_2635 ／ 紹介動画 https://www.youtube.com/watch?v=piaNsc6ilBI（クリックで読み込む軽量埋め込み。iframe を初期状態で置かない）
+- リンク: GitHub https://github.com/jphacks/tkb_2635 ／ 紹介動画は Instagram 用の 20 秒版（`assets/works/astera-intro.mp4`、720p に圧縮）を `<video preload="none">` で自前配信。YouTube の piaNsc6ilBI は別の動画（JPHACKS2025 Award Day）だったので使わない
 - 画像: `assets/works/astera-home.jpg` `astera-detail.jpg` `astera-list.png`
 
 ### 5.4 Members（`#members`）英字ラベル: MEMBERS

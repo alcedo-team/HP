@@ -194,22 +194,6 @@
       if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
       else if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
     });
-
-    // 軽量な動画埋め込み（クリックするまで iframe を置かない）
-    $$('.video').forEach(function (b) {
-      b.addEventListener('click', function () {
-        var id = b.getAttribute('data-yt');
-        if (!id) return;
-        var f = document.createElement('iframe');
-        f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1';
-        f.title = 'Astera 紹介動画';
-        f.allow = 'autoplay; encrypted-media; picture-in-picture';
-        f.setAttribute('allowfullscreen', '');
-        b.textContent = '';
-        b.appendChild(f);
-        b.disabled = true;
-      });
-    });
   });
 
   /* ---------- メール ---------- */
