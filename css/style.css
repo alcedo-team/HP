@@ -278,8 +278,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .station__dot { position: absolute; left: 0; top: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--blue); outline: 3px solid var(--navy); transition: background .3s; }
 .station.is-passed .station__dot { background: var(--orange); }
 .station--next .station__dot { animation: blink 1.2s ease-in-out infinite; }
-.station:nth-child(even) .station__body { margin-top: 40px; }
-.station:nth-child(3n) .station__body { margin-top: 18px; }
 .station__date { font: 600 .8rem/1.4 var(--font-en); letter-spacing: .06em; color: var(--blue-pale); }
 .station__text { margin-top: .5em; font-size: .875rem; line-height: 1.75; }
 .js:not(.rm) .station__body { opacity: 0; transform: translateY(10px); transition: opacity .5s, transform .5s; }
@@ -323,7 +321,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .stations { grid-template-columns: minmax(0, 1fr); gap: 28px; }
   .station { padding: 0 0 0 52px; }
   .station__dot { top: 2px; left: 0; }
-  .station:nth-child(n) .station__body { margin-top: 0; }
   .station:nth-child(even) { margin-left: 0; }
 }
 @media (max-width: 760px) {
