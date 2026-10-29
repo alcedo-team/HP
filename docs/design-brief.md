@@ -101,7 +101,7 @@
 - 説明: 東京都のオープンデータから混雑スコアを算出し、ゲームの「レア度」に変換する。外国人旅行者が、ドット絵の NPC と二人旅をしながら、空いている場所と時間へ自分から向かうクエスト型の観光アプリ。
 - 数字（カウントアップ）: 486 → 24（チーム数 → ファイナリスト）／ 6 日（First Stage 提出までの実装）／ 5 件（使った東京都オープンデータ）
 - 技術: TypeScript / Vite / Leaflet / Cloudflare Workers + D1 + Workers AI / PWA
-- リンク: 本番 https://tokyo-rpg.keio-sci-tech.workers.dev ／ GitHub https://github.com/alcedo-team/Tokyo-RPG
+- リンク: 本番 https://tokyo-rpg.keio-sci-tech.workers.dev のみ（GitHub の alcedo-team/Tokyo-RPG は private なので載せない）
 - 画像: `assets/works/tokyo-rpg-map.png` `tokyo-rpg-chat.png` `tokyo-rpg-card.png`（縦長のスマホ画面。3:4 や 9:16 のまま、円で切らない）
 
 **Astera**
