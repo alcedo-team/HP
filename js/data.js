@@ -12,7 +12,7 @@ window.ALCEDO_DATA = {
   members: [
     { name: "荒木田悠和", role: "代表・開発", note: "", dot: "blue", links: [] },
     { name: "橋間友洋", role: "開発", note: "", dot: "blue-deep", links: [] },
-    { name: "三角優斗", role: "メイン開発", note: "天体計算と遮蔽判定、23区の広域3Dを担当", dot: "blue", links: [] },
+    { name: "三角優斗", role: "メイン開発", note: "", dot: "blue", links: [] },
     { name: "糸長優矢", role: "メイン開発", note: "", dot: "blue-deep", links: [] },
     { name: "片平菜々美", role: "デザイン・開発", note: "", dot: "blue", links: [] }
   ],
