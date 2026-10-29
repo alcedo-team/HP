@@ -1,0 +1,4 @@
+.DS_Store
+# 画像生成の候補とログ（採用した画像は assets/char/ 直下に置く）
+assets/char/gen/
+.claude/
