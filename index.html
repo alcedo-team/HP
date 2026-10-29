@@ -34,12 +34,6 @@
 <!-- 共通パーツ（新幹線・くちばし矢印） -->
 <svg class="sprite" aria-hidden="true" focusable="false">
   <defs>
-    <g id="g-train">
-      <!-- 白〜薄灰の無地の車体、先頭はくちばし形、先頭の窓だけ濃紺、細い濃紺の輪郭線 -->
-      <path class="t-body" d="M6 12 Q6 7 12 7 L170 7 C200 7 236 22 256 36 L256 39 Q256 41 252 41 L12 41 Q6 41 6 36 Z"/>
-      <path class="t-line" d="M8 33 L246 35"/>
-      <path class="t-win" d="M182 12 C200 12 214 19 224 26 L186 26 Z"/>
-    </g>
     <g id="g-beak"><path d="M0 2 L42 8 L0 14 Q5 8 0 2 Z"/></g>
   </defs>
 </svg>
@@ -94,7 +88,7 @@
     </div>
   </section>
 
-  <div class="lane" data-lane aria-hidden="true"><i class="lane__probe"></i><svg class="train" viewBox="0 0 260 46" focusable="false"><use href="#g-train"/></svg></div>
+  <div class="lane" data-lane aria-hidden="true"><i class="lane__probe"></i><img class="train" src="assets/char/train-side.png" width="900" height="163" alt="" decoding="async"></div>
 
   <!-- About -->
   <section class="sec cut cut--about" id="about" aria-labelledby="about-h">
@@ -197,7 +191,7 @@
     </div>
   </section>
 
-  <div class="lane" data-lane aria-hidden="true"><i class="lane__probe"></i><svg class="train" viewBox="0 0 260 46" focusable="false"><use href="#g-train"/></svg></div>
+  <div class="lane" data-lane aria-hidden="true"><i class="lane__probe"></i><img class="train" src="assets/char/train-side.png" width="900" height="163" alt="" decoding="async"></div>
 
   <!-- Journey -->
   <section class="sec cut cut--journey journey" id="journey" aria-labelledby="journey-h">
@@ -209,13 +203,13 @@
           <svg class="rail__h" width="100%" height="24" focusable="false"><line class="rail__sleepers" x1="0" y1="12" x2="100%" y2="12"/><line class="rail__line" x1="0" y1="6" x2="100%" y2="6"/><line class="rail__line" x1="0" y1="18" x2="100%" y2="18"/></svg>
           <svg class="rail__v" width="24" height="100%" focusable="false"><line class="rail__sleepers" x1="12" y1="0" x2="12" y2="100%"/><line class="rail__line" x1="6" y1="0" x2="6" y2="100%"/><line class="rail__line" x1="18" y1="0" x2="18" y2="100%"/></svg>
         </div>
-        <svg class="train train--j" id="jtrain" viewBox="0 0 260 46" aria-hidden="true" focusable="false"><use href="#g-train"/></svg>
+        <img class="train train--j" id="jtrain" src="assets/char/train-side.png" width="900" height="163" alt="" aria-hidden="true" decoding="async">
         <ol class="stations" id="stations"></ol>
       </div>
     </div>
   </section>
 
-  <div class="lane" data-lane aria-hidden="true"><i class="lane__probe"></i><svg class="train" viewBox="0 0 260 46" focusable="false"><use href="#g-train"/></svg></div>
+  <div class="lane" data-lane aria-hidden="true"><i class="lane__probe"></i><img class="train" src="assets/char/train-side.png" width="900" height="163" alt="" decoding="async"></div>
 
   <!-- Contact -->
   <section class="sec cut cut--contact contact" id="contact" aria-labelledby="contact-h">

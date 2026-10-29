@@ -161,7 +161,7 @@
 
 ### 6-2. スクロール出現と新幹線
 - 各節の見出し・本文・画像は `IntersectionObserver` で `is-in` を付け、`opacity` と `translateY(16px)` で出す（stagger 60ms）
-- 斜めの境目3か所では、スクロール位置に応じて **デフォルメ新幹線の SVG**（原画の新幹線と同じ: 白〜薄灰の無地の車体、先頭はくちばし形の流線形、先頭の窓だけ濃紺、細い濃紺の輪郭線。青や橙の帯は付けない。文字なし）が左から右へ境目に沿って横切る。進み具合は `scrollY` から計算（アニメーションではなくスクラブ）
+- 斜めの境目3か所では、スクロール位置に応じて **新幹線の画像 `assets/char/train-side.png`**（原画の新幹線を codex で単体に描き起こした透過 PNG。白無地の車体、灰色の帯、濃紺の先頭窓、車輪、手書きの「Alcedo」、青と橙の速度線。自作 SVG は線の味が出ず不採用）が左から右へ境目に沿って横切る。進み具合は `scrollY` から計算（アニメーションではなくスクラブ）
 
 ### 6-3. Works ＝ 連結した車両
 - 横並びの `scroll-snap` トラック。各作品は1両。1両目（東京RPG）は幅 `min(880px, 86vw)`、2両目（Astera）は `min(720px, 80vw)`。車両どうしは短い「連結器」（`--navy` の線）でつなぐ
@@ -193,7 +193,7 @@ HP/
   js/data.js             … メンバー・年表・作品のデータ（差し替え前提）
   js/hero.js             … 6-1 の飛翔
   js/main.js             … ナビ・出現・新幹線のスクラブ・Works・Journey・カウント・メール
-  assets/char/           … original.jpg flying.png question.png exclaim.png train.png
+  assets/char/           … original.jpg flying.png flap.png question.png exclaim.png train.png train-side.png
   assets/works/          … 作品のスクショ
   assets/favicon.svg     … 青い円にくちばし形の白い三角（原画の頭部を模した単純な図形）
   docs/design-brief.md   … このファイル

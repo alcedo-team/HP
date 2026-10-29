@@ -168,10 +168,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 .lane { position: relative; height: 0; z-index: 3; pointer-events: none; overflow-x: clip; }
 .lane__probe { position: absolute; left: 0; top: 0; width: 0; height: var(--cut); }
-.train { position: absolute; left: 0; top: 0; width: clamp(130px, 17vw, 210px); height: auto; will-change: transform; overflow: visible; }
-.t-body { fill: var(--cream-2); stroke: var(--navy); stroke-width: 2.5; stroke-linejoin: round; }
-.t-line { fill: none; stroke: var(--ink-soft); stroke-width: 1.5; opacity: .5; }
-.t-win { fill: var(--navy); }
+.train { position: absolute; left: 0; top: 0; width: clamp(150px, 19vw, 270px); height: auto; will-change: transform; overflow: visible; }
 .js:not(.rm) .lane .train { opacity: 0; }
 .rm .lane { height: 0; }
 .rm .lane .train { display: none; }
@@ -284,7 +281,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .station__text { margin-top: .5em; font-size: .875rem; line-height: 1.75; }
 .js:not(.rm) .station__body { opacity: 0; transform: translateY(10px); transition: opacity .5s, transform .5s; }
 .js:not(.rm) .station.is-passed .station__body, .js:not(.rm) .station--next .station__body { opacity: 1; transform: none; }
-.train--j { z-index: 2; width: clamp(110px, 12vw, 150px); }
+.train--j { z-index: 2; width: clamp(120px, 13vw, 180px); }
 .js:not(.rm) .train--j { opacity: 0; }
 @keyframes blink { 50% { opacity: .25; } }
 

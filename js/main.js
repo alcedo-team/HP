@@ -251,10 +251,11 @@
     }
   }
 
-  // SVG は offsetWidth を持たないので、CSS の幅と viewBox の比から求める（回転の影響を受けない）
+  // 回転の影響を受けないよう、CSS の幅と画像の実寸比から求める（画像未読込時は SVG 時代の比 260:46 で代用）
   function trainSize(el) {
     var w = parseFloat(getComputedStyle(el).width) || 150;
-    return { w: w, h: w * 46 / 260 };
+    var ratio = (el.naturalWidth > 0 && el.naturalHeight > 0) ? el.naturalHeight / el.naturalWidth : 46 / 260;
+    return { w: w, h: w * ratio };
   }
 
   /* ---------- 斜めの境目を横切る新幹線（スクラブ）---------- */
