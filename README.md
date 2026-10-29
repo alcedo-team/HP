@@ -2,6 +2,8 @@
 
 慶應理工発ハッカソンチーム「Alcedo（アルケド）」のサイト。静的な HTML / CSS / JS だけで動く（ビルド不要）。
 
+**公開 URL**: https://alcedo-team.github.io/HP/ （`main` に push すると GitHub Pages が自動で更新する）
+
 ## 見る
 
 ```bash
@@ -38,4 +40,4 @@ python3 -m http.server 8787
 
 ## 公開（GitHub Pages）
 
-リポジトリの Settings → Pages で、ブランチ `main` の `/ (root)` を指定する。相対パスだけで組んであるので、サブパス配信でも動く。
+リポジトリ `alcedo-team/HP` の Settings → Pages で、ブランチ `main` の `/ (root)` を指定済み。相対パスだけで組んであるので、サブパス（`/HP/`）配信でも動く。
