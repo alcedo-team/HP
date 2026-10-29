@@ -123,6 +123,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .hero__l2 { margin-top: .15em; }
 .hero__l2 > .ch { background: linear-gradient(transparent 68%, var(--orange) 68%, var(--orange) 94%, transparent 94%); }
 .hero__lead { margin-top: clamp(20px, 3vw, 32px); max-width: 32em; color: var(--ink); }
+.hero__lead .nb { display: inline-block; } /* 文の途中で折り返さない（収まらなければ文ごと次の行へ） */
 .hero__lead .mark { font-style: normal; font-weight: 700; color: var(--navy); text-decoration: underline; text-decoration-color: var(--orange-deep); text-decoration-thickness: 3px; text-underline-offset: .22em; }
 .hero__cta { margin-top: clamp(24px, 3vw, 36px); display: flex; flex-wrap: wrap; align-items: center; gap: 20px 32px; }
 
