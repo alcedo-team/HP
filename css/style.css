@@ -197,7 +197,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .beak-btn:focus-visible { outline-offset: 4px; }
 
 .track {
-  display: flex; align-items: flex-start; gap: 0;
+  display: flex; align-items: stretch; gap: 0; /* 車両の上下の縁をそろえる */
   overflow-x: auto; scroll-snap-type: x mandatory;
   padding: 12px max(var(--gutter), calc((100% - var(--wrap)) / 2 + var(--gutter))) 28px;
   scroll-padding-inline: max(var(--gutter), calc((100% - var(--wrap)) / 2 + var(--gutter)));
@@ -206,7 +206,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .car { flex: none; scroll-snap-align: start; position: relative; background: var(--cream-2); border-top: 12px solid var(--blue); border-bottom: 8px solid var(--orange); --nose: 56px; clip-path: polygon(var(--nose) 0, 100% 0, 100% 100%, 0 100%); transition: opacity .3s; }
 .car--1 { width: min(880px, 86vw); }
-.car--2 { width: min(720px, 80vw); margin-top: 40px; --nose: 44px; }
+.car--2 { width: min(720px, 80vw); --nose: 44px; }
 .coupler { flex: none; align-self: flex-end; width: 28px; height: 4px; background: var(--navy); margin-bottom: 48px; }
 .track.has-open .car:not(.is-open) { opacity: .5; }
 .car__grid { display: grid; grid-template-columns: minmax(0, 62fr) minmax(0, 38fr); gap: clamp(16px, 3vw, 36px); padding: clamp(24px, 4vw, 40px) clamp(20px, 3vw, 36px) 24px calc(var(--nose) + 12px); }
