@@ -107,11 +107,13 @@ button { font: inherit; color: inherit; cursor: pointer; }
   padding: calc(var(--nav-h) + clamp(28px, 5vw, 64px)) 0 calc(var(--cut) + clamp(150px, 16vw, 230px));
   background: var(--cream);
 }
+/* 背景の英字は SVG の textLength で画面幅ぴったりに収める（右端の文字が切れない） */
 .hero__bg {
-  position: absolute; left: -1.5vw; bottom: calc(var(--cut) + 20px);
-  font: 800 clamp(6rem, 21vw, 21rem)/.8 var(--font-en);
-  color: var(--blue-pale); opacity: .5; white-space: nowrap; pointer-events: none; user-select: none;
+  position: absolute; left: 0; right: 0; bottom: calc(var(--cut) + 20px);
+  opacity: .5; pointer-events: none; user-select: none;
 }
+.hero__bg svg, .members__bg svg { display: block; width: 100%; height: auto; overflow: visible; }
+.hero__bg text, .members__bg text { font: 800 150px var(--font-en); fill: var(--blue-pale); }
 .hero__grid { display: grid; grid-template-columns: minmax(0, 62fr) minmax(0, 38fr); gap: clamp(16px, 3vw, 48px); align-items: center; z-index: 1; }
 .hero__eyebrow { font: 600 clamp(.6rem, 1.4vw, .75rem)/1.6 var(--font-en); letter-spacing: .18em; color: var(--blue-deep); margin-bottom: clamp(20px, 3vw, 36px); }
 .hero__title { font: 400 clamp(1.65rem, 3.9vw, 3.3rem)/1.2 var(--font-display); letter-spacing: .02em; color: var(--navy); }
@@ -119,6 +121,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .hero__l2 { margin-top: .15em; }
 .hero__l2 > .ch { background: linear-gradient(transparent 68%, var(--orange) 68%, var(--orange) 94%, transparent 94%); }
 .hero__lead { margin-top: clamp(20px, 3vw, 32px); max-width: 32em; color: var(--ink); }
+.hero__lead .mark { font-style: normal; font-weight: 700; color: var(--navy); text-decoration: underline; text-decoration-color: var(--orange-deep); text-decoration-thickness: 3px; text-underline-offset: .22em; }
 .hero__cta { margin-top: clamp(24px, 3vw, 36px); display: flex; flex-wrap: wrap; align-items: center; gap: 20px 32px; }
 
 .hero__char { position: relative; width: min(100%, 520px); aspect-ratio: 1; justify-self: end; }
@@ -242,7 +245,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 /* ===== Members ===== */
 .members { background: var(--cream-2); overflow-x: clip; }
-.members__bg { position: absolute; right: -2vw; top: clamp(24px, 4vw, 60px); font: 800 clamp(5rem, 17vw, 17rem)/.85 var(--font-en); color: var(--blue-pale); opacity: .5; white-space: nowrap; pointer-events: none; user-select: none; }
+.members__bg { position: absolute; left: 0; right: 0; top: clamp(24px, 4vw, 60px); opacity: .5; pointer-events: none; user-select: none; }
 .members .wrap { z-index: 1; }
 .members__lead { margin-bottom: clamp(36px, 5vw, 64px); }
 .member-list { display: grid; grid-template-columns: 1.1fr .9fr 1.25fr .95fr 1fr; gap: clamp(16px, 2.5vw, 36px); align-items: start; }
@@ -359,20 +362,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .rm .flight { display: none; }
 .flight__veil { position: absolute; inset: 0; background: var(--cream); }
 .flight__bird { position: absolute; left: 0; top: 0; will-change: transform, opacity; transform: translate(-200vw, 0); }
-.flight__bird svg { width: 100%; height: auto; overflow: visible; }
-.s-body { fill: var(--blue); }
-.s-outline { fill: none; stroke: var(--navy); stroke-width: 6; stroke-linejoin: round; }
-.s-chest { fill: var(--orange); }
-.s-throat { fill: var(--cream-2); }
-.s-cheek { fill: var(--orange); }
-.s-beakline { fill: none; stroke: var(--navy); stroke-width: 5; }
-.s-eye { fill: var(--navy); }
-.s-glint { fill: var(--cream-2); }
-.s-wing-near { fill: var(--blue); stroke: var(--navy); stroke-width: 6; stroke-linejoin: round; }
-.s-wing-far { fill: var(--blue-deep); stroke: var(--navy); stroke-width: 6; stroke-linejoin: round; }
-.wing { transform-origin: 0 0; animation: flap .16s ease-in-out infinite alternate; }
-.wing--far { animation-delay: -.06s; }
-@keyframes flap { from { transform: rotate(-38deg); } to { transform: rotate(28deg); } }
-.tr { stroke-width: 6; stroke-linecap: round; stroke-dasharray: 40 30; animation: dash .22s linear infinite; animation-delay: var(--td); }
-.tr--blue { stroke: var(--blue); } .tr--orange { stroke: var(--orange); }
-@keyframes dash { to { stroke-dashoffset: -70; } }
+.fb { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; animation: bob .46s ease-in-out infinite alternate; }
+.fb--2 { opacity: 0; }
+/* 2コマ目があるときは 0.2s 周期で交互に出す（羽ばたき） */
+.has-2 .fb--1 { animation: bob .46s ease-in-out infinite alternate, flap1 .2s steps(1) infinite; }
+.has-2 .fb--2 { animation: bob .46s ease-in-out infinite alternate, flap2 .2s steps(1) infinite; }
+@keyframes bob { from { translate: 0 -2.5%; } to { translate: 0 2.5%; } }
+@keyframes flap1 { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+@keyframes flap2 { 0%, 49% { opacity: 0; } 50%, 100% { opacity: 1; } }

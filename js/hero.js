@@ -46,7 +46,15 @@
     var W = window.innerWidth, H = window.innerHeight;
     var cr = charBox.getBoundingClientRect();
     var baseW = clamp(cr.width * 1.03, 240, 560); // 着地で 0.6 倍になるので、着地先の絵に合わせて大きめに始める
-    var baseH = baseW * (200 / 300);
+    var baseH = baseW; // 生成画像は正方形
+    var ROT_BASE = 32; // 画像の鳥はもともと右上（約 -32°）を向いている。進行方向に合わせる補正
+    var frame2 = bird.querySelector('.fb--2');
+    if (frame2) {
+      // 2コマ目が読めたときだけ羽ばたきを有効にする（無ければ1コマ＋上下動）
+      var on2 = function () { if (frame2.naturalWidth > 0) bird.classList.add('has-2'); };
+      if (frame2.complete) on2(); else frame2.addEventListener('load', on2);
+      frame2.addEventListener('error', function () { frame2.style.display = 'none'; });
+    }
     bird.style.width = baseW + 'px';
     bird.style.height = baseH + 'px';
 
@@ -73,7 +81,7 @@
         var k = t / T.leg1;
         pos = bez(P0, C1, C2, P3, k);
         var q = bez(P0, C1, C2, P3, Math.min(1, k + 0.02));
-        rot = Math.atan2(q.y - pos.y, q.x - pos.x) * 180 / Math.PI;
+        rot = Math.atan2(q.y - pos.y, q.x - pos.x) * 180 / Math.PI + ROT_BASE;
       } else {
         var k2 = easeOutCubic(clamp((t - T.leg1) / (T.leg2 - T.leg1), 0, 1));
         var r = charBox.getBoundingClientRect(); // スクロールされても追従
@@ -83,7 +91,7 @@
         pos = bez(P3, D1, D2, L, k2);
         var q2 = bez(P3, D1, D2, L, Math.min(1, k2 + 0.03));
         var ang = Math.atan2(q2.y - pos.y, q2.x - pos.x) * 180 / Math.PI;
-        rot = clamp(ang, -40, 40) * (1 - k2 * 0.9);
+        rot = clamp(ang + ROT_BASE, -40, 40) * (1 - k2); // 着地では水平に戻す
         scale = 1 - 0.4 * k2;
       }
       rot = clamp(rot, -45, 45);

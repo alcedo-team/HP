@@ -33,7 +33,7 @@ python3 -m http.server 8787
 ## 画像について
 
 - `assets/char/original.jpg` はメンバーが描いた原画
-- `flying.png` / `question.png` / `exclaim.png` / `train.png` は、その原画をもとに画像生成（Codex の画像生成ツール）で別の向き・姿勢に派生させたもの
+- `flying.png`（と羽ばたき用の `flap.png`）/ `question.png` / `exclaim.png` / `train.png` は、その原画をもとに画像生成（Codex の画像生成ツール）で別の向き・姿勢に派生させたもの
 - 作品のスクリーンショットは各リポジトリから流用
 
 ## 公開（GitHub Pages）
