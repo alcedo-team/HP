@@ -93,7 +93,9 @@ button { font: inherit; color: inherit; cursor: pointer; }
   padding-inline: var(--gutter);
   background: var(--cream); border-bottom: 2px solid var(--navy);
 }
-.nav__logo { font: 400 1.5rem/1 var(--font-display); text-decoration: none; color: var(--navy); flex: none; letter-spacing: .02em; }
+.nav__logo { display: inline-flex; align-items: baseline; gap: .5em; font: 400 1.5rem/1 var(--font-display); text-decoration: none; color: var(--navy); flex: none; letter-spacing: .02em; }
+/* 読み方。英字だけでは読めないので、ロゴの横に小さく添える */
+.nav__kana { font: 500 .72rem/1 var(--font-body); letter-spacing: .12em; color: var(--ink-soft); }
 .nav__links { position: relative; display: flex; gap: clamp(14px, 2.4vw, 32px); height: 100%; align-items: center; overflow-x: auto; scrollbar-width: none; }
 .nav__links::-webkit-scrollbar { display: none; }
 .nav__links a { font: 600 .7rem/1 var(--font-en); letter-spacing: .14em; text-decoration: none; color: var(--ink); padding: 8px 2px; white-space: nowrap; }
