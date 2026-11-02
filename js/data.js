@@ -10,11 +10,11 @@ window.ALCEDO_DATA = {
   // role / note が空文字のときは画面に出さない
   // dot: blue | blue-deep | blue-pale（全員を青系にそろえる。1人だけ別の色にしない）
   members: [
-    { name: "荒木田悠和", role: "代表・開発", note: "", dot: "blue", links: [] },
-    { name: "橋間友洋", role: "開発", note: "", dot: "blue-deep", links: [] },
-    { name: "三角優斗", role: "メイン開発", note: "", dot: "blue", links: [] },
-    { name: "糸長優矢", role: "メイン開発", note: "", dot: "blue-deep", links: [] },
-    { name: "片平菜々美", role: "デザイン・開発", note: "", dot: "blue", links: [] }
+    { name: "YUWA", role: "代表・開発", note: "", dot: "blue", links: [] },
+    { name: "TOMOHIRO", role: "開発", note: "", dot: "blue-deep", links: [] },
+    { name: "YUTO", role: "メイン開発", note: "", dot: "blue", links: [] },
+    { name: "YUYA", role: "メイン開発", note: "", dot: "blue-deep", links: [] },
+    { name: "NANAMI", role: "デザイン・開発", note: "", dot: "blue", links: [] }
   ],
 
   journey: [
