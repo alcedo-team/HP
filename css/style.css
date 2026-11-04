@@ -5,8 +5,8 @@
   --blue-pale: #BFE0FF;
   --orange: #F39A1E;
   --orange-deep: #F2521B;
-  --cream: #F4EFD6;
-  --cream-2: #FBF8EA;
+  --cream: #E8F1FA;   /* 地。薄い水色（名前は歴史的にクリームのまま。クリーム地は生成サイトの定番に見えるため変更） */
+  --cream-2: #F3F8FD; /* 地の明るい側 */
   --navy: #10264A;
   --ink: #1B2B45;
   --ink-soft: #4A5A75;
